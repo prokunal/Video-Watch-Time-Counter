@@ -24,7 +24,7 @@ v_files = []
 for i in files:
     if os.path.isfile(i):
         temp_filename, ext = os.path.splitext(i)
-        if len(ext) == 0:
+        if len(ext) == 0 or len(ext) >= 6:
             pass
         elif mimetypes.types_map[ext].find('video') == 0:
             v_files.append(i)
